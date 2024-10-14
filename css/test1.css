@@ -1,0 +1,580 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: ghostwhite;
+  padding: 0;
+  margin: 0;
+}
+.anh1 {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  display: block;
+  background-repeat: repeat;
+}
+@media (max-width: 529px) {
+  .anh1 img {
+    width: 100%;
+    overflow: hidden;
+  }
+  .anh1 a {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .thuonghieu {
+    display: none;
+  }
+  .group {
+    min-width: 100px;
+  }
+  header {
+    height: 70px;
+    align-items: center;
+  }
+}
+
+.anh1 img {
+  display: block;
+  margin: 0 auto;
+}
+.group {
+  display: flex;
+  line-height: 15px;
+  align-items: center;
+  position: relative;
+  max-width: 500px;
+  margin-left: 5px;
+  width: 100%;
+  min-width: 190px;
+}
+
+.input {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 45px;
+  padding-left: 40px;
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 12px;
+  background-color: #16171d;
+  outline: none;
+  color: #bdbecb;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px black;
+}
+
+.input:active {
+  transform: scale(0.95);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2.5px #2f303d;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  fill: white;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 1;
+}
+header {
+  background-color: #297be0d3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+header img {
+  width: 150px;
+  height: auto;
+  max-width: 150px;
+  background-attachment: fixed;
+  border: 1px solid #f9d952;
+  border-radius: 10px;
+}
+.thongtin {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: white;
+  font-size: 17px;
+  margin-left: 8px;
+}
+.thongtincon,
+.thongtincon-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  width: 160px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+}
+
+.thongtincon i,
+.thongtincon-1 i {
+  font-size: 30px;
+  margin-right: 2px;
+}
+.dathang {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.dathang a {
+  margin-bottom: 2px;
+  line-height: normal;
+}
+.thongtincon a,
+.thongtincon-1 a {
+  color: white;
+  text-decoration: none;
+}
+/*khi màn hình lớn hơn 768px*/
+@media (min-width: 901px) {
+  .menu_icon {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 971px) {
+  .thongtin {
+    width: 600px;
+  }
+}
+@media (min-width: 901px) {
+}
+/*khi màn hình nhỏ hơn 768px*/
+@media (max-width: 900px) {
+  .group {
+    width: 100%;
+  }
+  .menu_cha {
+    position: relative;
+  }
+  .menu_icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #000000d3;
+    background-color: #498ee2d3;
+    margin-left: 5px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: #297be0f0;
+    border-radius: 5px;
+    z-index: 1;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 0px;
+    top: 30px; /* Khoảng cách giữa icon và menu */
+    left: -140px; /* Di chuyển menu sang trái, có thể điều chỉnh giá trị này */
+  }
+
+  /* Hiển thị menu khi hover vào phần tử cha chứa icon */
+  .menu_cha:hover .menu {
+    display: block;
+  }
+
+  /* Đổi màu icon khi hover vào menu cha */
+  .menu_cha:hover .menu_icon {
+    color: white;
+  }
+
+  .menu .thongtincon,
+  .menu .thongtincon-1 {
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    width: 87%;
+  }
+  .menu .thongtin {
+    display: block;
+  }
+  .thongtincon a,
+  .thongtincon-1 a {
+    color: white;
+    font-size: 20px;
+  }
+
+  .menu .thongtincon:hover,
+  .menu .thongtincon-1:hover {
+    background-size: cover;
+    background-size: contain;
+    border-radius: 10px;
+    background-color: #0038d186;
+  }
+  .thuonghieu {
+    width: 150px;
+    height: auto;
+    background-attachment: fixed;
+  }
+}
+
+.khung {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: rgb(0, 0, 0, 0.7); /*màu kính đen*/
+}
+.nd {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border: 6px solid #297be0d3;
+  background-image: url(https://img.freepik.com/free-photo/anime-style-clouds_23-2151071681.jpg?t=st=1728058722~exp=1728062322~hmac=8097bd9c7af2336b48eeb9a0785426aadef28294b4596a698423e170ba1d3eb4&w=996);
+}
+#dangnhap:target {
+  display: flex; /*ấn vào nó sẽ hiện ra khung*/
+}
+.nd input {
+  width: 150px;
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #297be0d3;
+}
+.nd button {
+  padding: 10px 20px;
+  background-color: #b8da3e;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nd button:hover {
+  background-color: rgb(118, 56, 204);
+}
+.nd .close {
+  display: block;
+  margin: 20px;
+  color: #6e6e6e;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nd .link {
+  display: block;
+  font-size: 16px;
+  margin: 10px 0;
+  color: #8526ea;
+  text-decoration: underline 2px rgb(0, 0, 0);
+}
+.nd .link:hover {
+  text-decoration: underline 2px;
+}
+/*-start----------------------------------------------*/
+.nd button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+}
+
+.nd button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.nd button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.nd button:hover::before {
+  width: 200%;
+}
+/*----------------------------------------------end-*/
+.ND_cha {
+  width: 100%;
+  height: 60px;
+  background-color: #7b29e0d3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .ND_cha {
+    height: auto;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+@media (max-width: 840px) {
+  .ND a,
+  .ND i {
+    font-size: 15px;
+  }
+}
+
+.ND {
+  margin-left: 10px;
+  text-align: center;
+  font-size: large;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+  padding: 10px;
+  width: 130px;
+  height: 29px;
+  border-radius: 5px;
+  display: flex;
+  gap: 5px;
+}
+.ND a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  flex-wrap: nowrap;
+}
+.ND i {
+  background-color: white;
+  color: #7b29e0d3;
+  height: fit-content;
+  border-radius: 5px;
+  font-size: 22px;
+}
+.ND:hover {
+  background-color: #7b29e05a;
+}
+@media (max-width: 628px) {
+  .ND_cha {
+    justify-content: flex-start;
+  }
+}
+
+/*----------------------------------------------------*/
+.section_tong {
+  display: flex;
+  box-sizing: border-box;
+  height: 400px;
+  width: 80%;
+  margin: 0 auto; /*Chỉnh giứa theo chiều ngang*/
+  gap: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+/*---------------------------SECTION_1-------------------*/
+.section_1 {
+  background-color: white;
+  height: 100%;
+  flex: 1.8;
+  display: block;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 230px;
+}
+.sec,
+.sec_dt-ip {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+}
+.sec_label {
+  white-space: nowrap; /*không xuống dòng*/
+}
+.sec_label a {
+  text-decoration: none;
+  color: black;
+}
+.sec_label i {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+.sec_icon {
+  font-size: 23px;
+  margin-left: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.326); /* Màu đen với độ trong suốt */
+  display: none; /* Ẩn overlay mặc định */
+  z-index: 1; /* Đảm bảo overlay nằm trên tất cả các phần khác, nhưng dưới section_1_an */
+}
+
+.section_1_an {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  max-width: 300px;
+  background-color: #f5f5f5;
+  z-index: 2;
+  display: none;
+  height: 400px;
+  width: 230px;
+  border-radius: 5px;
+}
+
+/* Hiển thị khi click vào danh mục */
+#danhmuc:target {
+  display: block; /* Hiển thị phần section_1_an */
+}
+
+/* Hiển thị lớp phủ khi section_1_an được hiển thị */
+.section_1_an:target ~ .overlay {
+  display: block; /* Hiển thị lớp phủ khi section_1_an được hiển thị */
+}
+
+.sec2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  border-top: 1px solid rgba(193, 179, 179, 0.384);
+}
+.sec2 .close2 {
+  text-decoration: none;
+  color: black;
+}
+.sec2:hover {
+  background-color: #2c9baf79;
+}
+/*----------------------------------------------------------------------*/
+
+/*----------------------------SECTION_2-------------------------*/
+.section_2 {
+  background-color: rgb(228, 231, 71);
+  height: 100%;
+  flex: 6.4;
+  min-width: auto;
+}
+/*-----------------------------------------------------------------------*/
+
+/*---------------------------SECTION_3--------------------------*/
+.section_3 {
+  background-color: green;
+  height: 100%;
+  flex: 1.8;
+  width: 225px;
+  min-width: 225px;
+}
+/*------------------------------------------------------------------------*/
+/*khi màn hình nhỏ hơn 1024px*/
+@media (max-width: 1024px) {
+  .section_tong {
+    width: 100%;
+  }
+  .section_3 {
+    display: none;
+  }
+}
+/*khi màn hình nhỏ hơn 1112px*/
+@media (max-width: 1112px) {
+  .section_tong {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.table-1 {
+  display: none;
+  position: absolute; /* Đặt bảng là vị trí tuyệt đối dựa trên sec_dt-ip */
+  top: -10px;
+  right: -623px;
+  z-index: 100;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.table-1 table {
+  border-collapse: separate; /* Tách biệt các viền */
+  border-spacing: 20px 0; /* Khoảng cách giữa các cột, chiều cao giữa các hàng vẫn bình thường */
+  width: 600px; /* Chiều rộng của bảng */
+}
+
+.table-1 th,
+.table-1 td {
+  padding: 8px; /* Padding cho các ô */
+  text-align: left;
+}
+
+/* Thay đổi khoảng cách giữa các cột cụ thể */
+.table-1 th:nth-child(1),
+.table-1 td:nth-child(1) {
+  padding-right: 20px; /* Khoảng cách bên phải cột 1 */
+}
+
+.table-1 th:nth-child(2),
+.table-1 td:nth-child(2) {
+  padding-right: 20px; /* Khoảng cách bên phải cột 2 */
+}
+
+.table-1 th:nth-child(3),
+.table-1 td:nth-child(3) {
+  padding-left: 10px; /* Khoảng cách bên trái cột 3 */
+}
+
+.table-1 th {
+  background-color: #f2f2f2;
+}
+
+/* Hiển thị bảng khi hover vào sec_dt-ip */
+.sec_dt-ip:hover .table-1 {
+  display: block;
+}
+
+/* Bảng vẫn hiển thị khi hover vào chính nó */
+.table-1:hover {
+  display: block;
+}
