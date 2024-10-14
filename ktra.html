@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Phone Store [T]</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css\ktra.css" />
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide" style="background-color: black">
+          <a href="https://www.thegioididong.com/" target="_blank">
+            <img
+              src="https://didongviet.vn/_next/image?url=https%3A%2F%2Fcdn-v2.didongviet.vn%2Ffiles%2Fbanners%2F2024%2F8%2F30%2F1%2F1727685880678_header_780_x_100.jpg&w=384&q=75"
+              alt="Anh1"
+            />
+          </a>
+        </div>
+        <div class="slide" style="background-color: #e9efff">
+          <a href="https://cellphones.com.vn/" target="_blank">
+            <img
+              src="https://cdn2.cellphones.com.vn/x/https://dashboard.cellphones.com.vn/storage/Top%20banner_Giao%20hang.svg"
+              alt="Anh2"
+            />
+          </a>
+        </div>
+        <div class="slide" style="background-color: #e9efff">
+          <a href="#" target="_blank">
+            <img
+              src="https://cdn2.cellphones.com.vn/x/https://dashboard.cellphones.com.vn/storage/Top%20banner_Thu%20cu.svg"
+              alt="Anh3"
+            />
+          </a>
+        </div>
+        <div class="slide" style="background-color: #e9efff">
+          <a href="#" target="_blank">
+            <img
+              src="https://cdn2.cellphones.com.vn/x/https://dashboard.cellphones.com.vn/storage/Top%20banner_Chinh%20hang.svg"
+              alt="Anh4"
+            />
+          </a>
+        </div>
+        <div class="slide" style="background-color: rgba(255, 166, 0, 0.899)">
+          <a href="https://didongviet.vn/" target="_blank">
+            <img
+              src="https://didongviet.vn/_next/image?url=https%3A%2F%2Fcdn-v2.didongviet.vn%2Ffiles%2Fbanners%2F2024%2F9%2F8%2F1%2F1728389479729_header_03.png&w=1920&q=75"
+              alt="Anh5"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <header id="top" class="dau">
+      <!--Thương hiệu-->
+      <div class="thuonghieu">
+        <div class="th">
+          <img class="thuonghieu1" src="../img/logo.png" alt="anh2" />
+          <img class="thuonghieu2" src="../img/logo_icon.png" alt="anh3" />
+        </div>
+      </div>
+
+      <!--Phần search-->
+      <div class="InputContainer">
+        <form action="https://cellphones.com.vn/" method="GET" class="search-form">
+          <input
+            placeholder="Search"
+            id="input"
+            class="input"
+            name="query" 
+            type="text"
+          />
+          <!-- Button đóng vai trò là icon tìm kiếm -->
+          <button type="submit" class="labelforsearch">
+            <div class="searchIcon">
+              <i class="bx bx-search"></i>
+            </div>
+          </button> 
+        </form>
+      </div>
+
+      <!--Phần menu-->
+
+        <!-- Menu -->
+        <div class="menu">
+          <div class="thongtin">
+            <div class="thongtincon" id="small">
+              <i class="bx bx-user-circle"></i>
+              <a href="#dangnhap">Đăng nhập</a>
+            </div>
+            <div class="thongtincon-1">
+              <i class="bx bx-phone"></i>
+              <div class="dathang">
+                <a href="#">Đặt hàng</a>
+                <a href="#">1800.1915</a>
+              </div>
+            </div>
+            <div class="thongtincon-1">
+              <i class="bx bx-map"></i>
+              <a href="#1">TP.HCM</a>
+            </div>
+            <div class="thongtincon">
+              <i class="bx bx-cart-download"></i>
+              <a href="#">Giỏ hàng</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="dangnhap" class="khung">
+      <div class="nd">
+        <h2>Đăng nhập</h2>
+        <form action="#" method="post">
+          <input
+            type="text"
+            name="email_sdt"
+            placeholder="Email/Tên đăng nhập"
+            required
+          />
+          <!-- Hiển thị cho ng dùng biết đó là bắt buộc-->
+          <input type="text" name="Matkhau" placeholder="Mật khẩu" required />
+        </form>
+        <button type="submit" >
+          Đăng nhập
+        </button>
+        <div class="Dk">
+        <a href="#" class="link">Đăng kí</a>
+        <p>/</p>
+        <a href="#" class="link">Quên mật khẩu?</a>
+        </div>
+        <a href="#" class="close">Đóng</a>
+      </div>
+    </div>
+    <nav class="Thanh">
+      <div class="Thanh_con">
+        <i class="bx bx-list-ul"></i>
+        <a href="#danhmuc">Danh mục</a>
+      </div>
+      <div class="Thanh_con" id="an0">
+        <i class="bx bx-user-circle"></i>
+              <a href="#dangnhap">Đăng nhập</a>
+      </div>
+      <div class="Thanh_con" id="an1">
+        <i class="bx bx-news"></i>
+        <a href="#">Tin tức</a>
+      </div>
+      <div class="Thanh_con" id="an2">
+        <i class="bx bx-group"></i>
+        <a href="#">Tuyển dụng</a>
+      </div>
+      <div class="Thanh_con" id="an7">
+        <i class="bx bxs-bell-ring bx-tada"></i>
+        <a href="#">Khuyến mãi</a>
+      </div>
+      <div class="Thanh_con" id="an4">
+        <i class="bx bx-chevrons-right bx-burst"></i>
+        <a href="#">Góc thanh lí</a>
+      </div>
+      <div class="Thanh_con" id="an5">
+        <i class='bx bx-store'></i>
+        <a href="#">Cửa hàng</a>
+      </div>
+      <div class="Thanh_con" id="an6">
+        <i class='bx bx-paper-plane'></i>
+        <a href="#xemthem">Xem thêm</a>
+      </div>
+    </nav>
+
+    <div class="section_tong">
+      <div class="section_1">
+        <div class="sec_dt-ip">
+          <div class="sec_label">
+            <i class="bx bxs-devices"></i>
+            <a href="#">
+              <span>Điện thoại,&nbsp;</span>
+            </a>
+            <a href="#">
+              <span>iPad</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <div class="table-1 more">
+            <table>
+              <tr>
+                <th>Hãng</th>
+                <th>Mức giá</th>
+                <th>Hot hiện nay</th>
+              </tr>
+              <tr>
+                <td>iPhone</td>
+                <td>Dưới 2 triệu</td>
+                <td>iPhone 15 Pro Max</td>
+              </tr>
+              <tr>
+                <td>Samsung</td>
+                <td>Từ 2-7 triệu</td>
+                <td>iPhone 16 Series</td>
+              </tr>
+              <tr>
+                <td>Xiaomi</td>
+                <td>Từ 7-13 triệu</td>
+                <td>Galaxy Z Fold6</td>
+              </tr>
+              <tr>
+                <td>iPad</td>
+                <td>Từ 13-20 triệu</td>
+                <td>iPad Air 2024</td>
+              </tr>
+              <tr>
+                <td>Nokia</td>
+                <td>Trên 20 triệu</td>
+                <td>Galaxy Z Flip6</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Galaxy Tab S10 Series</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Xiaomi 14T Pro</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="sec_laptop">
+          <div class="sec_label">
+            <i class="bx bx-laptop"></i>
+            <a href="#">
+              <span>Laptop</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <div class="table-2 more">
+            <table>
+              <tr>
+                <th>Hãng</th>
+                <th>Mức giá</th>
+                <th>Nhu cầu sử dụng</th>
+              </tr>
+              <tr>
+                <td>Mac</td>
+                <td>Dưới 10 triệu</td>
+                <td>Văn phòng</td>
+              </tr>
+              <tr>
+                <td>ASUS</td>
+                <td>Từ 10-15 triệu</td>
+                <td>Gaming</td>
+              </tr>
+              <tr>
+                <td>Lenovo</td>
+                <td>Từ 15-20 triệu</td>
+                <td>Mỏng nhẹ</td>
+              </tr>
+              <tr>
+                <td>Dell</td>
+                <td>Từ 20-25 triệu</td>
+                <td>Đồ họa kĩ thuật</td>
+              </tr>
+              <tr>
+                <td>HP</td>
+                <td>Từ 25-30 triệu</td>
+                <td>Sinh viên</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Cảm ứng</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="sec_tainghe">
+          <div class="sec_label">
+            <i class="fa fa-headphones"></i>
+            <a href="#">
+              <span>Tai nghe</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <div class="table-3 more">
+            <table>
+              <tr>
+                <th>Loại</th>
+                <th>Hãng</th>
+                <th>Mức giá</th>
+              </tr>
+              <tr>
+                <td>Bluetooth</td>
+                <td>Apple</td>
+                <td>Tai nghe dưới 200k</td>
+              </tr>
+              <tr>
+                <td>Chụp tai</td>
+                <td>JBL</td>
+                <td>Tai nghe dưới 500k</td>
+              </tr>
+              <tr>
+                <td>Nhét tai</td>
+                <td>Marshall</td>
+                <td>Tai nghe dưới 1 triệu</td>
+              </tr>
+              <tr>
+                <td>Có dây</td>
+                <td>Sony</td>
+                <td>Tai nghe dưới 2 triệu</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Tai nghe dưới 5 triệu</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="sec_dongho">
+          <div class="sec_label">
+            <i class="bx bxs-watch"></i>
+            <a href="#">
+              <span>Đồng hồ</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <div class="table-4 more">
+            <table>
+              <tr>
+                <th>Loại</th>
+                <th>Hãng</th>
+                <th>Hot hiện nay</th>
+              </tr>
+              <tr>
+                <td>Đồng hồ thông minh</td>
+                <td>Apple Watch</td>
+                <td>Apple Watch Series 10</td>
+              </tr>
+              <tr>
+                <td>Vòng đeo tay thông minh</td>
+                <td>SamSung</td>
+                <td>Apple Watch Series 9</td>
+              </tr>
+              <tr>
+                <td>Đồng hồ định vị trẻ em</td>
+                <td>Xiaomi</td>
+                <td>Galaxy Watch 7</td>
+              </tr>
+              <tr>
+                <td>Dây đeo</td>
+                <td>Huawei</td>
+                <td>Galaxy Watch Ultra</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Xiaomi Watch 2</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="sec_phukien">
+          <div class="sec_label">
+            <i class="bx bx-usb"></i>
+            <a href="#">
+              <span>Phụ kiện</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+          <div class="table-5 more">
+            <table>
+              <tr>
+                <th>Phụ kiện di động,iPad</th>
+                <th>Phụ kiện Laptop</th>
+                <th>Thiết bị lưu trữ</th>
+              </tr>
+              <tr>
+                <td>Ốp lưng</td>
+                <td>Chuột/Bàn phím</td>
+                <td>Thẻ nhớ</td>
+              </tr>
+              <tr>
+                <td>Cáp,sạc</td>
+                <td>Sạc Laptop</td>
+                <td>USB</td>
+              </tr>
+              <tr>
+                <td>Dán màn hình</td>
+                <td>Túi chống sốc</td>
+                <td>Ổ cứng di động</td>
+              </tr>
+              <tr>
+                <td>Pin dự phòng</td>
+                <td>Thảm lót chuột</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="sec_label">
+            <i class="bx bx-repost"></i>
+            <a href="#">
+              <span>Thu cũ đổi mới</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+        <div class="table-6 more">
+          <table>
+            <tr>
+              <th>Chọn theo hãng</th>
+              <th>Sản phẩm trợ giá cao</th>
+            </tr>
+            <tr>
+              <td>Thu cũ iPhone</td>
+              <td>iPhone 15 Pro Max: 2 triệu</td>
+            </tr>
+            <tr>
+              <td>Thu cũ Samsung</td>
+              <td>Samsung Galaxy S23 Ultra: 2 triệu</td>
+            </tr>
+            <tr>
+              <td>Thu cũ Xiaomi</td>
+              <td>Macbook: 2 triệu</td>
+            </tr>
+            <tr>
+              <td>Thu cũ iPad</td>
+              <td>Laptop: 3 triệu</td>
+            </tr>
+            <tr>
+              <td>Thu cũ tai nghe</td>
+              <td>Galaxy Tab S9: 500k</td>
+            </tr>
+            <tr>
+              <td>Thu cũ đồng hồ thông minh</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+     </div>
+
+      <!--Phần section bị ẩn-->
+      <div id="danhmuc" class="section_1_an">
+        <div class="sec">
+          <div class="sec_label">
+            <i class="bx bxs-devices"></i>
+            <a href="#">
+              <span>Điện thoại,&nbsp;</span>
+            </a>
+            <a href="#">
+              <span>iPad</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="sec_label">
+            <i class="bx bx-laptop"></i>
+            <a href="#">
+              <span>Laptop</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="sec_label">
+            <i class="fa fa-headphones"></i>
+            <a href="#">
+              <span>Tai nghe</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="sec_label">
+            <i class="bx bxs-watch"></i>
+            <a href="#">
+              <span>Đồng hồ</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="sec_label">
+            <i class="bx bx-usb"></i>
+            <a href="#">
+              <span>Phụ kiện</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="sec_label">
+            <i class="bx bx-repost"></i>
+            <a href="#">
+              <span>Thu cũ đổi mới</span>
+            </a>
+          </div>
+          <div class="sec_icon">
+            <i class="bx bx-chevron-right"></i>
+          </div>
+        </div>
+        <div class="sec2">
+          <a href="#" class="close2">Đóng</a>
+        </div>
+      </div>
+
+      <!-- Lớp phủ nền -->
+      <div class="overlay"></div>
+
+      <div class="section_2">
+        <div class="container">
+          <div class="slider-content">
+              <div class="slider-content-nd-top">
+                <div class="slide-content">
+                  <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/tai-nghe-sony-wf-c510-home.jpg" alt="anh1"></a>
+                </div>
+                <div class="slide-content">
+                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/xiaomi-14T-series-home-mo-ban.jpg" alt="anh2"></a>
+                </div>
+                <div class="slide-content">  
+                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/Sliding-airpod-4.jpg" alt="anh3"></a>
+                </div>
+                <div class="slide-content">
+                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/watch-gt-5-series-03-10-home-new-new.jpg" alt="anh4"></a>
+                </div>
+                <div class="slide-content">
+                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/dien-thoai-samsung-galaxy-s24-fe-home-27-9-2024.png" alt="anh5"></a>
+                </div>
+              </div>
+
+              <div class="slider-content-nd-bottom">
+                <li class="active" title="iPhone 16 Series">iPhone 16 Series</li>
+                <li class="active" title="Xiaomi 14T Series">Xiaomi 14T Series</li>
+                <li class="active" title="AirPods 4">AirPods 4</li>
+                <li class="active" title="Galaxy S24 FE">Galaxy S24 FE</li>
+                <li class="active" title="Tai nghe Sony WF C510">Tai nghe Sony WF C510</li>
+              </div>
+              
+            </div>
+          </div>
+        </div>  
+
+      <div class="section_3">
+        <div class="section_3-container">
+          <div class="section_3-content">
+            <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/m55-gia-moi-right-banner-30-8-2024.png" alt=Anh1"></a>
+          </div>
+          <div class="section_3-content"> 
+            <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/right-banner-macbook-cto-09-08-new-new.jpg" alt="Ãnh"></a>
+          </div>
+          <div class="section_3-content">
+            <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/b2s-2024-right-banner-laptop.jpg" alt=""></a>
+          </div>
+        </div>
+      </div> 
+    </div>  
+  </body>
+</html
