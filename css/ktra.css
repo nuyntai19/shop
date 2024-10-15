@@ -863,7 +863,7 @@ header img {
   border-radius: 10px;
 }
 .hotSale {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 20px;
   color: white;
@@ -875,6 +875,7 @@ header img {
 .hotSale a {
   display: block;
   position: absolute;
+  text-decoration: none;
   right: 1%;
 }
 .hotSaleItemsContainer {
@@ -890,10 +891,8 @@ header img {
   margin: 2px;
 }
 .hotSaleItems img {
-  width: 100%;
-  margin: auto;
-  clip: auto;
-  margin: 5px 0px;
+  width: 90%;
+  margin-left: 5%;
   height: 45%;
   transition: 0.2s;
 }
@@ -917,8 +916,11 @@ header img {
 .saveBtn a {
   text-decoration: none;
 }
+.infoItems {
+  width: 22%;
+}
 footer {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: space-around;
