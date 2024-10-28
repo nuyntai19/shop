@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: ghostwhite;
@@ -130,6 +133,7 @@ header img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .input {
@@ -144,28 +148,29 @@ header img {
 }
 
 .search-icon {
-  width: 20px;
+  width: 100%;
+  height: 100%;
+}
+.search-icon i {
+  font-size: 30px;
 }
 
 .labelforsearch {
   cursor: pointer;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
   background-color: white;
   border: none;
-  width: 20px;
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
 }
 
 .InputContainer:hover,
 .InputContainer:focus-within {
   border: 2px solid #8b4aec;
   box-shadow: 0px 0px 0px 7px rgba(185, 74, 236, 0.441);
-  background-color: white;
-}
-
-.InputContainer:active {
-  transform: scale(0.95);
-}
-.InputContainer form .input:active {
   background-color: white;
 }
 
@@ -420,6 +425,8 @@ header img {
   border-radius: 5px;
   display: flex;
   gap: 3px;
+  justify-content: center;
+  align-items: center;
 }
 .Thanh_con a {
   color: #333;
@@ -526,25 +533,34 @@ header img {
   max-width: 230px;
 }
 
-.sec,
-.sec_dt-ip,
-.sec_laptop,
-.sec_tainghe,
-.sec_dongho,
-.sec_phukien {
+.sec_dt-ip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  background-color: #297be0b1;
+  border-radius: 5px;
+}
+.sec_dt-ip a {
+  font-size: 20px;
+}
+
+.sec_dt-ip .sec_label a {
+  color: white;
+}
+
+.sec_dt-ip .sec_label {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  color: white;
+}
+.sec {
   display: flex;
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
-  margin-top: 10px;
-}
-.sec:hover,
-.sec_dt-ip:hover,
-.sec_laptop:hover,
-.sec_tainghe:hover,
-.sec_dongho:hover,
-.sec_phukien:hover {
-  box-shadow: 3px 4px 16px -2px #268391;
 }
 .sec_label {
   white-space: nowrap; /*không xuống dòng*/
@@ -642,117 +658,6 @@ header img {
   }
 }
 
-.more table {
-  border-collapse: separate; /* Tách biệt các viền */
-  border-spacing: 20px 0; /* Khoảng cách giữa các cột, chiều cao giữa các hàng vẫn bình thường */
-  width: 600px; /* Chiều rộng của bảng */
-}
-
-.more th,
-.more td {
-  padding: 8px; /* Padding cho các ô */
-  text-align: left;
-}
-
-/* Thay đổi khoảng cách giữa các cột cụ thể */
-.more th:nth-child(1),
-.more td:nth-child(1) {
-  padding-right: 20px; /* Khoảng cách bên phải cột 1 */
-}
-
-.more th:nth-child(2),
-.more td:nth-child(2) {
-  padding-right: 20px; /* Khoảng cách bên phải cột 2 */
-}
-
-.more th:nth-child(3),
-.more td:nth-child(3) {
-  padding-left: 10px; /* Khoảng cách bên trái cột 3 */
-}
-
-.more th {
-  background-color: #f2f2f2;
-}
-
-/* Hiển thị bảng khi hover vào sec_dt-ip */
-.sec_dt-ip:hover .table-1,
-.sec_laptop:hover .table-2,
-.sec_tainghe:hover .table-3,
-.sec_dongho:hover .table-4,
-.sec_phukien:hover .table-5,
-.sec:hover .table-6 {
-  display: block;
-  z-index: 5;
-}
-
-/* Bảng vẫn hiển thị khi hover vào chính nó */
-.more:hover {
-  display: block;
-  z-index: 5;
-}
-.more {
-  display: none;
-  position: absolute; /* Đặt bảng là vị trí tuyệt đối dựa trên sec_dt-ip */
-  top: 0px;
-  right: -612px;
-  z-index: 100;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  height: 100%;
-  border-radius: 10px;
-}
-
-@media (max-width: 821px) {
-  .more {
-    width: 314px; /* Điều chỉnh bảng cho phù hợp với kích thước màn hình */
-    right: -325px;
-  }
-
-  /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
-  .more table {
-    width: 100%; /* Đặt kích thước cố định để tạo điều kiện cho cuộn */
-    display: block;
-    overflow-x: auto; /* Cho phép cuộn ngang */
-    white-space: nowrap; /* Không ngắt dòng giữa các cột */
-  }
-
-  /* Ẩn thanh cuộn nhưng vẫn cuộn được */
-  .more table::-webkit-scrollbar {
-    display: none; /* Ẩn thanh cuộn trên các trình duyệt sử dụng WebKit (Chrome, Safari, Edge) */
-  }
-
-  .more table {
-    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
-    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-  }
-}
-
-@media (max-width: 605px) {
-  .more {
-    width: 320px; /* Điều chỉnh bảng cho phù hợp với kích thước màn hình */
-    right: -330px;
-  }
-
-  /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
-  .more table {
-    width: 100%; /* Đặt kích thước cố định để tạo điều kiện cho cuộn */
-    display: block;
-    overflow-x: auto; /* Cho phép cuộn ngang */
-    white-space: nowrap; /* Không ngắt dòng giữa các cột */
-  }
-
-  /* Ẩn thanh cuộn nhưng vẫn cuộn được */
-  .more table::-webkit-scrollbar {
-    display: none; /* Ẩn thanh cuộn trên các trình duyệt sử dụng WebKit (Chrome, Safari, Edge) */
-  }
-
-  .more table {
-    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
-    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-  }
-}
 @media (max-width: 560px) {
   .section_1_an {
     position: absolute;
@@ -803,10 +708,6 @@ header img {
   .sec_label i {
     display: none;
   }
-  .more {
-    width: 228%;
-    right: -237%;
-  }
   .section_1_an {
     position: relative;
     top: 0;
@@ -830,10 +731,6 @@ header img {
   }
 }
 @media (max-width: 476px) {
-  .more {
-    width: 194%;
-    right: -202%;
-  }
   .section_1_an {
     position: relative;
     top: 0;
@@ -857,10 +754,6 @@ header img {
   }
 }
 @media (max-width: 425px) {
-  .more {
-    width: 161%;
-    right: -169%;
-  }
   .section_1_an {
     position: relative;
     top: 0;
@@ -887,10 +780,6 @@ header img {
   }
 }
 @media (max-width: 375px) {
-  .more {
-    width: 122%;
-    right: -132%;
-  }
   .section_1_an {
     position: relative;
     top: 0;
@@ -918,10 +807,6 @@ header img {
 }
 
 @media (max-width: 320px) {
-  .more {
-    width: 170px;
-    right: -182px;
-  }
   .section_1_an {
     position: relative;
     top: -145px;
