@@ -1,0 +1,226 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: ghostwhite;
+  padding: 0;
+  margin: 0;
+}
+/*1-------------------------------------------------*/
+.slider {
+  position: relative;
+  width: 100%; /* Đặt chiều rộng của slider là 100% */
+  border: 1px solid orange; /* Viền cho slider */
+  overflow: hidden; /* Ẩn phần hình ảnh bị tràn ra ngoài */
+}
+
+.slides {
+  display: flex;
+  animation: slide 20s infinite; /* Chạy animation vô hạn */
+  transition: transform 1s ease-in-out; /* Hiệu ứng chuyển động */
+}
+
+.slide {
+  min-width: 100%; /* Chiều rộng slide bằng 100% của slider */
+  box-sizing: border-box;
+  display: flex; /* Sử dụng flex để căn giữa ảnh */
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%; /* Giữ ảnh trong giới hạn chiều rộng slider */
+  height: 40px; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+  object-fit: contain; /* Đảm bảo giữ nguyên tỷ lệ ảnh */
+}
+
+/* Tạo hiệu ứng tự động chuyển đổi */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  16% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  36% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  56% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  76% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-400%);
+  }
+  96% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*2------------------------------------------------*/
+header {
+  background-color: #297be0b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 70px;
+}
+.thuonghieu {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 45px;
+  flex: 1;
+  min-width: 230px;
+}
+.th {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.thuonghieu2 {
+  height: 70px;
+}
+.thuonghieu1 {
+  width: 500px;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  max-width: 180px;
+  background-attachment: fixed;
+}
+
+.InputContainer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 15px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  min-width: 150px;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  width: 27%;
+}
+.InputContainer form {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input {
+  width: 90%;
+  min-width: 100px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: rgb(223, 136, 22);
+  flex: 2;
+}
+
+.search-icon {
+  width: 20px;
+}
+
+.labelforsearch {
+  cursor: pointer;
+  padding: 0 12px 0 0;
+  background-color: white;
+  border: none;
+  width: 20px;
+}
+
+.InputContainer:hover,
+.InputContainer:focus-within {
+  border: 2px solid #8b4aec;
+  box-shadow: 0px 0px 0px 7px rgba(185, 74, 236, 0.441);
+  background-color: white;
+}
+
+.InputContainer:active {
+  transform: scale(0.95);
+}
+.InputContainer form .input:active {
+  background-color: white;
+}
+
+.tentrang {
+  width: 50%;
+  align-content: center;
+  justify-content: center;
+}
+.tentrang h2 {
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .thuonghieu {
+    min-width: 200px;
+  }
+  .thuonghieu1 {
+    width: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .thuonghieu1 {
+    display: none;
+  }
+  .thuonghieu {
+    min-width: 50px;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+  .th {
+    min-width: 50px;
+  }
+  .thuonghieu2 {
+    min-width: 60px;
+  }
+  .InputContainer {
+    width: 36%;
+  }
+}
+@media (max-width: 485px) {
+  .thuonghieu {
+    display: none;
+  }
+  .InputContainer {
+    width: 40%;
+    margin-left: 0;
+  }
+  .tentrang h2 {
+    font-size: 20px;
+  }
+  header {
+    justify-content: space-around;
+  }
+}

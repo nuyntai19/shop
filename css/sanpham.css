@@ -1,0 +1,756 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: ghostwhite;
+  padding: 0;
+  margin: 0;
+}
+/*1-------------------------------------------------*/
+.slider {
+  position: relative;
+  width: 100%; /* Đặt chiều rộng của slider là 100% */
+  border: 1px solid orange; /* Viền cho slider */
+  overflow: hidden; /* Ẩn phần hình ảnh bị tràn ra ngoài */
+}
+
+.slides {
+  display: flex;
+  animation: slide 20s infinite; /* Chạy animation vô hạn */
+  transition: transform 1s ease-in-out; /* Hiệu ứng chuyển động */
+}
+
+.slide {
+  min-width: 100%; /* Chiều rộng slide bằng 100% của slider */
+  box-sizing: border-box;
+  display: flex; /* Sử dụng flex để căn giữa ảnh */
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%; /* Giữ ảnh trong giới hạn chiều rộng slider */
+  height: 40px; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+  object-fit: contain; /* Đảm bảo giữ nguyên tỷ lệ ảnh */
+}
+
+/* Tạo hiệu ứng tự động chuyển đổi */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  16% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  36% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  56% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  76% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-400%);
+  }
+  96% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*2------------------------------------------------*/
+header {
+  background-color: #297be0b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 70px;
+}
+.thuonghieu {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 45px;
+  flex: 1;
+  min-width: 230px;
+}
+.th {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.thuonghieu2 {
+  height: 70px;
+}
+.thuonghieu1 {
+  width: 500px;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  max-width: 180px;
+  background-attachment: fixed;
+}
+
+.InputContainer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 15px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  min-width: 150px;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  width: 27%;
+}
+.InputContainer form {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input {
+  width: 90%;
+  min-width: 100px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: rgb(223, 136, 22);
+  flex: 2;
+}
+
+.search-icon {
+  width: 20px;
+}
+
+.labelforsearch {
+  cursor: pointer;
+  padding: 0 12px 0 0;
+  background-color: white;
+  border: none;
+  width: 20px;
+}
+
+.InputContainer:hover,
+.InputContainer:focus-within {
+  border: 2px solid #8b4aec;
+  box-shadow: 0px 0px 0px 7px rgba(185, 74, 236, 0.441);
+  background-color: white;
+}
+
+.InputContainer:active {
+  transform: scale(0.95);
+}
+.InputContainer form .input:active {
+  background-color: white;
+}
+
+.menu {
+  width: 45%;
+  margin: 0 0 0 20px;
+}
+
+.thongtin {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 19px;
+  justify-content: center;
+  gap: 20px;
+}
+.thongtincon,
+.thongtincon-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.thongtincon i,
+.thongtincon-1 i {
+  font-size: 30px;
+  margin-right: 2px;
+}
+.dathang {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.dathang a {
+  margin-bottom: 2px;
+  line-height: normal;
+}
+.thongtincon a,
+.thongtincon-1 a {
+  color: white;
+  text-decoration: none;
+}
+
+#small {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .thuonghieu {
+    min-width: 200px;
+  }
+  .thuonghieu1 {
+    width: 150px;
+  }
+
+  .thongtin {
+    font-size: 16px;
+    margin-left: 25px;
+    gap: 0px;
+  }
+  .thongtincon-1 {
+    display: none;
+  }
+  .menu {
+    width: 18%;
+    margin: 0 10px 0 20px;
+  }
+  .InputContainer {
+    width: 50%;
+  }
+  .thongtincon a {
+    width: 140px;
+    min-width: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .thuonghieu1 {
+    display: none;
+  }
+  .thuonghieu {
+    min-width: 50px;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+  .th {
+    min-width: 50px;
+  }
+  .thuonghieu2 {
+    min-width: 60px;
+  }
+  .InputContainer {
+    width: 36%;
+  }
+  .thongtin {
+    font-size: 14px;
+    margin-left: 15px;
+    gap: 0px;
+  }
+  .thongtincon-1 {
+    display: none;
+  }
+  .menu {
+    width: 23%;
+    margin: 0 0 0 20px;
+  }
+  .InputContainer {
+    width: 57%;
+  }
+  .thongtincon {
+    margin-right: 0px;
+    width: 110px;
+  }
+  .thongtincon a {
+    width: 140px;
+    min-width: 80px;
+  }
+}
+@media (max-width: 485px) {
+  .thuonghieu {
+    display: none;
+  }
+  .menu {
+    width: 27%;
+    margin: 0;
+  }
+  .InputContainer {
+    width: 57%;
+    margin-left: 0;
+    padding-left: 10px;
+  }
+  .tentrang h2 {
+    font-size: 20px;
+  }
+  header {
+    justify-content: space-around;
+  }
+}
+
+/*-------------------Đường dẫn -------------------*/
+
+.duongdan {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 2px 0 rgba(45, 45, 45, 0.47);
+  margin-bottom: 10px;
+}
+
+.nd_duongdan {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.nd_duongdan a {
+  text-decoration: none;
+  margin: 0 5px;
+  color: black;
+}
+
+/*-------------------Slide-Show quảng cáo -------------------*/
+.slide-tong {
+  width: 100%;
+  height: 100.75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.slide-show {
+  width: 595px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#slider1 {
+  margin-right: 10px;
+}
+.list-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 5px;
+}
+.list-images img {
+  width: 595px;
+  height: 100%;
+  border-radius: 5px;
+}
+.btn:hover {
+  color: white;
+}
+.btn {
+  font-size: 40px;
+  color: orange;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  background-color: rgba(52, 52, 52, 0.166);
+  cursor: pointer;
+}
+.btn-left {
+  left: -10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.btn-right {
+  right: -10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.index-images {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.index-item {
+  width: 10px; /* Thêm chiều rộng */
+  height: 10px; /* Thêm chiều cao */
+  margin: 3px;
+  border-radius: 50%;
+  border: 2px solid #438eebe6;
+}
+
+.active {
+  background-color: orange;
+}
+
+@media (max-width: 900px) {
+  #slider2 {
+    display: none;
+  }
+  #slider1 {
+    margin-right: 0;
+  }
+}
+@media (max-width: 597px) {
+  .slide-tong {
+    width: 100%; /* Đặt chiều rộng của slider1 thành 100% */
+  }
+  .active {
+    background-color: #297be0b1;
+  }
+  .list-images img {
+    width: 100%; /* Đặt chiều rộng của hình ảnh thành 100% */
+  }
+}
+
+@media (max-width: 490px) {
+  .btn {
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-82%);
+    background-color: rgba(255, 255, 255, 0);
+    color: orange;
+  }
+  .btn-left {
+    left: 0px; /* Điều chỉnh vị trí của nút bên trái */
+  }
+  .btn-right {
+    right: 0px; /* Điều chỉnh vị trí của nút bên phải */
+  }
+}
+
+@media (max-width: 375px) {
+  .btn {
+    transform: translateY(-99%);
+  }
+}
+
+/*-------------------Phân loại điện thoại -------------------*/
+.loai {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+  height: 40px;
+}
+
+.loai_nd {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  -webkit-overflow-scrolling: touch; /* Hiệu ứng cuộn mượt trên di động */
+  scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+  white-space: nowrap; /* Ngăn xuống dòng */
+}
+
+.loai_nd::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn trên Chrome, Safari */
+}
+
+.loai_nd a {
+  padding: 10px;
+  margin: 0 3px 5px 0;
+  height: 35px;
+  width: 134px;
+  box-sizing: border-box;
+  flex-shrink: 0; /* Ngăn các mục co lại */
+}
+
+.loai_nd img {
+  height: 28px;
+  max-width: none;
+  min-width: 98px;
+  width: 120px;
+  background-size: cover;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/*-------------------Sản phẩm nổi bật ở trang chủ -------------------*/
+
+.hotSale {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  background-color: #297be0d6;
+  background-image: url(https://media.istockphoto.com/id/995688184/vi/anh/hi%E1%BB%87u-%E1%BB%A9ng-k%E1%BA%BFt-c%E1%BA%A5u-n%E1%BB%81n-m%C3%A0u-xanh-nh%E1%BA%A1t-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng.jpg?s=612x612&w=0&k=20&c=kHzFC5JH47vnQBAqoJCSP1GHqCdTx9GAtNshGp_YbDI=);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #888;
+  border-radius: 5px;
+}
+.title_hotSale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.hotSale i {
+  width: 25px;
+  font-size: 150%;
+}
+.title_hotSale a {
+  color: #333;
+  text-decoration: none;
+  background-color: white;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: small;
+}
+
+.hotSaleItemsContainer {
+  width: 100%; /* Giữ nguyên chiều rộng 100% */
+  display: flex; /* Giữ flex để xếp hàng ngang */
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  overflow-y: hidden; /* Không cho phép cuộn dọc */
+  padding: 10px 0; /* Thêm padding trên và dưới nếu cần */
+  scroll-snap-type: x mandatory; /* Tùy chọn cuộn mượt */
+}
+
+.hotSaleItems {
+  border: 1px solid #297be0d3;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  height: 320px;
+  width: 14.7%;
+  margin: 2px;
+  padding: 10px;
+  gap: 0px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 131px;
+}
+.hotSaleItems img {
+  height: 45%;
+  transition: 0.2s;
+}
+.hotSaleItems h3 {
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+.hotSaleItems h4 {
+  text-align: start;
+  margin: 15px 0;
+}
+.Tong_saveBtn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.saveBtn {
+  display: flex;
+  border-radius: 5px;
+  height: 100%;
+  background-color: #297be081;
+  transition: 0.2s;
+  padding: 8px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+}
+.a {
+  width: 75%;
+}
+.b {
+  width: 25%;
+}
+.saveBtn:hover {
+  background-color: #5790d6d3;
+}
+.saveBtn a {
+  text-decoration: none;
+  color: #333;
+}
+
+@media (min-width: 999px) {
+  .hotSaleItemsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử xuống hàng */
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    justify-content: center;
+  }
+
+  .hotSaleItems {
+    flex: 1 1 18%; /* Linh hoạt phủ đầy 4 phần tử mỗi hàng */
+    max-width: 19%; /* Giới hạn kích thước tối đa cho mỗi phần tử */
+    height: 320px;
+  }
+}
+
+@media (max-width: 999px) {
+  .hotSaleItemsContainer {
+    flex-direction: row;
+    display: inline-flex; /* Chuyển sang inline-flex để tránh lỗi cuộn */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 10px; /* Thêm padding để tránh đẩy các phần tử bên trái */
+  }
+
+  .hotSaleItems {
+    flex-shrink: 0;
+    width: 140px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 1112px) {
+  .hotSale {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}
+
+/* Sản phẩm chính */
+
+.products {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  color: black;
+  background-color: #ffffffe2;
+  border-radius: 10px;
+}
+.title_product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.title_product a {
+  color: black;
+  text-decoration: none;
+  background-color: #f3f4f6;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: small;
+}
+hr {
+  width: 50%;
+  border: none;
+  margin: 0 auto;
+  border-top: 2px solid black;
+}
+.title_con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  font-size: smaller;
+}
+.title_con h2 {
+  margin: 10px 0;
+}
+.Tong_saveBtn i {
+  font-size: 20px;
+}
+
+@media (max-width: 1112px) {
+  .products {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.hotSaleItems:hover {
+  box-shadow: 4px 5px 17px -4px #268391;
+  transform: scale(1.01);
+}
+
+/* ------------------Nut back-----------------*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 38px;
+  width: 50px;
+  height: 50px;
+  background-color: #297be0b1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 19px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in;
+}
+
+.scroll-to-top:hover {
+  background-color: #2f87f2d4;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 69px;
+    right: 19px;
+    width: 35px;
+    height: 35px;
+  }
+}
+/*-------------------Footer-------------------*/
+
+.infoItems {
+  width: 22%;
+}
+footer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #c8c8c955;
+  border-radius: 10px 10px 0px 0px;
+}
+.rong {
+  display: none;
+  height: 60px;
+  width: 100%;
+  background-color: black;
+}
+@media (max-width: 768px) {
+  .infoItems {
+    display: none;
+  }
+  .rong {
+    display: block;
+  }
+}
