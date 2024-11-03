@@ -188,6 +188,10 @@ header img {
   justify-content: center;
   gap: 20px;
 }
+.thongtincon {
+  cursor: pointer;
+}
+
 .thongtincon,
 .thongtincon-1 {
   display: flex;
@@ -267,7 +271,7 @@ header img {
     min-width: 60px;
   }
   .InputContainer {
-    min-width: 150px;
+    min-width: 125px;
     max-width: 400px;
     margin-left: 10px;
   }
@@ -315,11 +319,21 @@ header img {
     width: 90px;
   }
   .thongtincon a {
-    width: 80px;
-    min-width: 40px;
+    display: none;
   }
   #small {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 19px;
+    width: 69px;
+  }
+  #small a {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+  }
+  #small i {
+    font-size: 20px;
   }
 }
 @media (max-width: 333px) {
@@ -327,7 +341,6 @@ header img {
     width: 80px;
   }
 }
-
 /*3------------------------------------------------*/
 
 .Thanh {
