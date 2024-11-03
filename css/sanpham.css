@@ -77,7 +77,7 @@ header {
   background-color: #297be0b1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 10px;
   height: 70px;
 }
@@ -124,7 +124,7 @@ header img {
   min-width: 150px;
   box-sizing: border-box;
   flex-wrap: nowrap;
-  width: 27%;
+  width: 95%;
 }
 .InputContainer form {
   flex-wrap: nowrap;
@@ -133,6 +133,7 @@ header img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .input {
@@ -147,15 +148,23 @@ header img {
 }
 
 .search-icon {
-  width: 20px;
+  width: 100%;
+  height: 100%;
+}
+.search-icon i {
+  font-size: 30px;
 }
 
 .labelforsearch {
   cursor: pointer;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
   background-color: white;
   border: none;
-  width: 20px;
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
 }
 
 .InputContainer:hover,
@@ -165,16 +174,10 @@ header img {
   background-color: white;
 }
 
-.InputContainer:active {
-  transform: scale(0.95);
-}
-.InputContainer form .input:active {
-  background-color: white;
-}
-
 .menu {
-  width: 45%;
-  margin: 0 0 0 20px;
+  flex: 2.2;
+  margin: 0 40px 0 30px;
+  min-width: 400px;
 }
 
 .thongtin {
@@ -184,6 +187,9 @@ header img {
   font-size: 19px;
   justify-content: center;
   gap: 20px;
+}
+.thongtincon {
+  cursor: pointer;
 }
 .thongtincon,
 .thongtincon-1 {
@@ -195,6 +201,10 @@ header img {
   height: 50px;
   margin: 0;
   padding: 0;
+}
+
+#small {
+  position: relative;
 }
 
 .thongtincon i,
@@ -217,8 +227,97 @@ header img {
   text-decoration: none;
 }
 
-#small {
+/* Tooltip khi di chuột vào #small */
+#small .tooltip {
   display: none;
+  position: absolute;
+  bottom: -315px;
+  left: -11px;
+  width: 277px;
+  height: 276px;
+  background-image: url("https://media.istockphoto.com/id/995688184/vi/anh/hi%E1%BB%87u-%E1%BB%A9ng-k%E1%BA%BFt-c%E1%BA%A5u-n%E1%BB%81n-m%C3%A0u-xanh-nh%E1%BA%A1t-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng.jpg?s=612x612&w=0&k=20&c=kHzFC5JH47vnQBAqoJCSP1GHqCdTx9GAtNshGp_YbDI=");
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiển thị tooltip khi hover vào cả #small và .tooltip */
+#small:hover .tooltip,
+#small .tooltip:hover {
+  display: block;
+}
+
+/* Mũi tên hướng lên bên ngoài tooltip */
+#small .tooltip::after {
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: 8.4%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #92d3f1 transparent;
+}
+
+.tooltip-1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 13%;
+  gap: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.tooltip-1 img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.tooltip-1 h4 {
+  text-align: center;
+  height: 35px;
+  margin: 11px 0;
+}
+.tooltip-2 {
+  height: 77%;
+}
+.tooltip-2 h5 {
+  font-size: 17px;
+  margin: 10px 0;
+  color: black;
+  height: 10%;
+}
+.tooltip-2 hr {
+  width: 100%;
+  height: 1%;
+}
+.tooltip-2-nd-thongbao {
+  background-color: white;
+  height: 69%;
+  border-radius: 10px;
+}
+.tooltip-2-nd-thongbao p {
+  text-align: center;
+  color: #297be0d3;
+  padding-top: 10px;
+}
+.tooltip-3 {
+  height: 10%;
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tooltip-3 a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: red;
+  font-size: 15px;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
@@ -228,7 +327,12 @@ header img {
   .thuonghieu1 {
     width: 150px;
   }
-
+  .InputContainer {
+    min-width: 250px;
+  }
+  .input {
+    min-width: 200px;
+  }
   .thongtin {
     font-size: 16px;
     margin-left: 25px;
@@ -238,15 +342,25 @@ header img {
     display: none;
   }
   .menu {
-    width: 18%;
-    margin: 0 10px 0 20px;
-  }
-  .InputContainer {
-    width: 50%;
+    flex: 2;
+    min-width: 200px;
+    margin: 0 30px 0 30px;
   }
   .thongtincon a {
-    width: 140px;
+    width: 100px;
     min-width: 80px;
+  }
+  #small .tooltip {
+    width: 144px;
+  }
+  #small .tooltip::after {
+    left: 13.4%;
+  }
+  .tooltip-1 h4 {
+    margin: 1px;
+  }
+  .tooltip-1 {
+    gap: 0;
   }
 }
 @media (max-width: 768px) {
@@ -265,7 +379,12 @@ header img {
     min-width: 60px;
   }
   .InputContainer {
-    width: 36%;
+    min-width: 150px;
+    max-width: 400px;
+    margin-left: 10px;
+  }
+  .input {
+    min-width: 95px;
   }
   .thongtin {
     font-size: 14px;
@@ -276,42 +395,55 @@ header img {
     display: none;
   }
   .menu {
-    width: 23%;
-    margin: 0 0 0 20px;
-  }
-  .InputContainer {
-    width: 57%;
+    flex: 1.8;
+    min-width: 200px;
+    margin: 0 10px 0 20px;
   }
   .thongtincon {
     margin-right: 0px;
     width: 110px;
   }
   .thongtincon a {
-    width: 140px;
+    width: 100px;
     min-width: 80px;
   }
 }
-@media (max-width: 485px) {
-  .thuonghieu {
+@media (max-width: 455px) {
+  .thongtin {
+    font-size: 14px;
+    margin-left: 5px;
+    gap: 0px;
+  }
+  .thongtincon-1 {
     display: none;
   }
   .menu {
-    width: 27%;
-    margin: 0;
+    flex: 1.8;
+    min-width: 85px;
+    margin: 0 10px 0 10px;
   }
-  .InputContainer {
-    width: 57%;
-    margin-left: 0;
-    padding-left: 10px;
+  .thongtincon {
+    margin-right: 0px;
+    width: 90px;
   }
-  .tentrang h2 {
-    font-size: 20px;
+  .thongtincon a {
+    display: none;
   }
-  header {
-    justify-content: space-around;
+  .tooltip-3 a {
+    display: block;
+  }
+  #small .tooltip {
+    left: -148px;
+  }
+  #small .tooltip::after {
+    transform: translateX(670%);
   }
 }
-
+@media (max-width: 333px) {
+  .thongtincon {
+    width: 80px;
+  }
+}
 /*-------------------Đường dẫn -------------------*/
 
 .duongdan {
