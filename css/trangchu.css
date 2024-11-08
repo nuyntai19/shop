@@ -229,10 +229,10 @@ header img {
 #small .tooltip {
   display: none;
   position: absolute;
-  bottom: -315px;
+  bottom: -367px;
   left: -11px;
   width: 277px;
-  height: 276px;
+  height: 330px;
   background-image: url("https://media.istockphoto.com/id/995688184/vi/anh/hi%E1%BB%87u-%E1%BB%A9ng-k%E1%BA%BFt-c%E1%BA%A5u-n%E1%BB%81n-m%C3%A0u-xanh-nh%E1%BA%A1t-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng.jpg?s=612x612&w=0&k=20&c=kHzFC5JH47vnQBAqoJCSP1GHqCdTx9GAtNshGp_YbDI=");
   background-size: cover;
   color: white;
@@ -281,7 +281,7 @@ header img {
   margin: 11px 0;
 }
 .tooltip-2 {
-  height: 77%;
+  height: 70%;
 }
 .tooltip-2 h5 {
   font-size: 17px;
@@ -316,6 +316,19 @@ header img {
   color: red;
   font-size: 15px;
   text-align: center;
+}
+
+.tooltip-4 {
+  padding-bottom: 10px;
+}
+
+.tooltip-4 a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: start;
 }
 
 @media (max-width: 900px) {
