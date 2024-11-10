@@ -1,3 +1,5 @@
+// ---------------&& list-images &&-------------------------
+
 function initSlider(sliderId) {
   const slider = document.getElementById(sliderId);
   const listImages = slider.querySelector(".list-images");

@@ -73,36 +73,6 @@ body {
 }
 
 /*2------------------------------------------------*/
-header {
-  background-color: #297be0b1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 10px;
-  height: 70px;
-}
-.thuonghieu {
-  display: flex;
-  height: 100%;
-  box-sizing: border-box;
-  position: relative;
-  margin-left: 10px;
-  margin-right: 45px;
-  flex: 1;
-  min-width: 230px;
-}
-.th {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.thuonghieu2 {
-  height: 70px;
-}
-.thuonghieu1 {
-  width: 500px;
-}
-
 header img {
   width: 80px;
   height: auto;
@@ -191,6 +161,7 @@ header img {
 .thongtincon {
   cursor: pointer;
 }
+
 .thongtincon,
 .thongtincon-1 {
   display: flex;
@@ -201,10 +172,6 @@ header img {
   height: 50px;
   margin: 0;
   padding: 0;
-}
-
-#small {
-  position: relative;
 }
 
 .thongtincon i,
@@ -225,112 +192,6 @@ header img {
 .thongtincon-1 a {
   color: white;
   text-decoration: none;
-}
-
-/* Tooltip khi di chuột vào #small */
-#small .tooltip {
-  display: none;
-  position: absolute;
-  bottom: -367px;
-  left: -11px;
-  width: 277px;
-  height: 330px;
-  background-image: url("https://media.istockphoto.com/id/995688184/vi/anh/hi%E1%BB%87u-%E1%BB%A9ng-k%E1%BA%BFt-c%E1%BA%A5u-n%E1%BB%81n-m%C3%A0u-xanh-nh%E1%BA%A1t-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng.jpg?s=612x612&w=0&k=20&c=kHzFC5JH47vnQBAqoJCSP1GHqCdTx9GAtNshGp_YbDI=");
-  background-size: cover;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 14px;
-  z-index: 1;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Hiển thị tooltip khi hover vào cả #small và .tooltip */
-#small:hover .tooltip,
-#small .tooltip:hover {
-  display: block;
-}
-
-/* Mũi tên hướng lên bên ngoài tooltip */
-#small .tooltip::after {
-  content: "";
-  position: absolute;
-  top: -19px;
-  left: 8.4%;
-  transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #92d3f1 transparent;
-}
-
-.tooltip-1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 13%;
-  gap: 15px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-.tooltip-1 img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-.tooltip-1 h4 {
-  text-align: center;
-  height: 35px;
-  margin: 11px 0;
-}
-.tooltip-2 {
-  height: 70%;
-}
-.tooltip-2 h5 {
-  font-size: 17px;
-  margin: 10px 0;
-  color: black;
-  height: 10%;
-}
-.tooltip-2 hr {
-  width: 100%;
-  height: 1%;
-}
-.tooltip-2-nd-thongbao {
-  background-color: white;
-  height: 69%;
-  border-radius: 10px;
-}
-.tooltip-2-nd-thongbao p {
-  text-align: center;
-  color: #297be0d3;
-  padding-top: 10px;
-}
-.tooltip-3 {
-  height: 10%;
-  border-top: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.tooltip-3 a {
-  margin: 10px 0;
-  text-decoration: none;
-  color: red;
-  font-size: 15px;
-  text-align: center;
-}
-
-.tooltip-4 {
-  padding-bottom: 10px;
-}
-
-.tooltip-4 a {
-  margin: 10px 0;
-  text-decoration: none;
-  color: black;
-  font-weight: bolder;
-  font-size: 15px;
-  text-align: start;
 }
 
 @media (max-width: 900px) {
@@ -363,18 +224,6 @@ header img {
     width: 100px;
     min-width: 80px;
   }
-  #small .tooltip {
-    width: 144px;
-  }
-  #small .tooltip::after {
-    left: 13.4%;
-  }
-  .tooltip-1 h4 {
-    margin: 1px;
-  }
-  .tooltip-1 {
-    gap: 0;
-  }
 }
 @media (max-width: 768px) {
   .thuonghieu1 {
@@ -392,7 +241,7 @@ header img {
     min-width: 60px;
   }
   .InputContainer {
-    min-width: 150px;
+    min-width: 125px;
     max-width: 400px;
     margin-left: 10px;
   }
@@ -442,14 +291,19 @@ header img {
   .thongtincon a {
     display: none;
   }
-  .tooltip-3 a {
+  #small {
+    display: flex;
+    flex-direction: column;
+    margin-top: 19px;
+    width: 69px;
+  }
+  #small a {
     display: block;
+    text-align: center;
+    font-size: 10px;
   }
-  #small .tooltip {
-    left: -148px;
-  }
-  #small .tooltip::after {
-    transform: translateX(670%);
+  #small i {
+    font-size: 20px;
   }
 }
 @media (max-width: 333px) {
@@ -872,6 +726,7 @@ hr {
     height: 35px;
   }
 }
+
 /*-------------------Phân Trang-------------------*/
 .phantrang_container {
   width: 100%;

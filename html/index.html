@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css\ktra.css" />
+    <link rel="stylesheet" href="../css\index.css" />
   </head>
   <body>
     <div class="slider">
@@ -77,7 +77,7 @@
 
       <!--Phần search-->
       <div class="InputContainer">
-        <form action="sanpham.html" method="GET" class="search-form">
+        <form action="sanpham(nologin).html" method="GET" class="search-form">
           <input
             placeholder="Search"
             id="input"
@@ -272,38 +272,29 @@
       <!-- Lớp phủ nền -->
       <div class="overlay"></div>
 
-      <div class="section_2">
-        <div class="container">
-          <div class="slider-content">
-              <div class="slider-content-nd-top">
-                <div class="slide-content">
-                  <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/sliding-home-iphone-16-pro-km-moi.jpg" alt="anh1"></a>
-                </div>
-                <div class="slide-content">
-                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/xiaomi-14T-series-home-mo-ban.jpg" alt="anh2"></a>
-                </div>
-                <div class="slide-content">  
-                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/thu-cu-banner-390-home.jpg" alt="anh3"></a>
-                </div>
-                <div class="slide-content">
-                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/watch-gt-5-series-03-10-home-new-new.jpg" alt="anh4"></a>
-                </div>
-                <div class="slide-content">
-                  <a href=""></a><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/dien-thoai-samsung-galaxy-s24-fe-home-27-9-2024.png" alt="anh5"></a>
-                </div>
-              </div>
-
-              <div class="slider-content-nd-bottom">
-                <li class="active" title="iPhone 16 Series">iPhone 16 Series</li>
-                <li class="active" title="Xiaomi 14T Series">Xiaomi 14T Series</li>
-                <li class="active" title="OPPO Find X5 Pro">OPPO Find X5 Pro</li>
-                <li class="active" title="Galaxy S24 FE">Galaxy S24 FE</li>
-                <li class="active" title="realme C67">realme C67</li>
-              </div>
-              
-            </div>
-         </div>
-      </div>  
+      <div class="slide-tong">
+        <div class="slide-show" id="slider1">
+          <div class="list-images">
+              <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/sliding-home-iphone-16-pro-km-moi.jpg" alt="anh1"></a>
+              <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/xiaomi-14T-series-home-mo-ban.jpg" alt="anh2"></a>
+              <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/thu-cu-banner-390-home.jpg" alt="anh3"></a>
+              <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/watch-gt-5-series-03-10-home-new-new.jpg" alt="anh4"></a>
+              <a href=""><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:90/plain/https://dashboard.cellphones.com.vn/storage/dien-thoai-samsung-galaxy-s24-fe-home-27-9-2024.png" alt="anh5"></a>
+          </div>
+          <div class="btns">
+            <div class="btn-left btn"><i class='bx bx-chevron-left'></i></div>
+            <div class="btn-right btn"><i class='bx bx-chevron-right' ></i></div>
+          </div>
+          <div class="index-images">
+            <div class="index-item index-item-0 active" title="iPhone 16 Series">iPhone 16 Series</div>
+            <div class="index-item index-item-1" title="Xiaomi 14T Series">Xiaomi 14T Series</div>
+            <div class="index-item index-item-2" title="OPPO Find X5 Pro">OPPO Find X5 Pro</div>
+            <div class="index-item index-item-3" title="Galaxy S24 FE">Galaxy S24 FE</div>
+            <div class="index-item index-item-4" title="realme C67">realme C67</div>
+          </div>
+        </div>
+      </div>
+    
 
       <div class="section_3">
         <div class="section_3-container">
@@ -329,7 +320,7 @@
           <i class='bx bxs-hot' style="align-content: center;"></i>
           <h2>HOT SALE CUỐI TUẦN</h2>
         </div>
-        <a href="#" onclick="alert('Bạn cần đăng nhập!')" >Xem thêm</a>
+        <a href="sanpham(nologin).html"  >Xem thêm</a>
       </div>
 
       <div class="hotSaleItemsContainer">
@@ -343,7 +334,7 @@
               <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
             </button>
             <button class="saveBtn b">
-              <i class='bx bx-cart-add' ></i>
+              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
             </button>
           </div>
         </div>
@@ -356,7 +347,7 @@
               <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
             </button>
             <button class="saveBtn b">
-              <i class='bx bx-cart-add' ></i>
+              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
             </button>
           </div>
         </div>
@@ -369,7 +360,7 @@
               <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
             </button>
             <button class="saveBtn b">
-              <i class='bx bx-cart-add' ></i>
+              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
             </button>
           </div>
         </div>
@@ -382,7 +373,7 @@
               <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
             </button>
             <button class="saveBtn b">
-              <i class='bx bx-cart-add' ></i>
+              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
             </button>
           </div>
         </div>
@@ -395,7 +386,7 @@
               <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
             </button>
             <button class="saveBtn b">
-              <i class='bx bx-cart-add' ></i>
+              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
             </button>
           </div>
         </div>
@@ -408,7 +399,7 @@
               <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
             </button>
             <button class="saveBtn b">
-              <i class='bx bx-cart-add' ></i>
+              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
             </button>
           </div>
         </div>
@@ -420,7 +411,7 @@
 
       <div class="title_product">
         <h2>ĐIỆN THOẠI</h2>
-        <a href="#" onclick="alert('Bạn cần đăng nhập!')">Xem tất cả</a>
+        <a href="sanpham(nologin).html">Xem tất cả</a>
       </div>
     
       <hr>
@@ -441,7 +432,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -455,7 +446,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -469,7 +460,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -483,7 +474,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -497,7 +488,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -511,7 +502,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -535,7 +526,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -549,7 +540,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -563,7 +554,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -577,7 +568,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -591,7 +582,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -605,7 +596,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -629,7 +620,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -643,7 +634,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -657,7 +648,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -671,7 +662,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -685,7 +676,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -699,7 +690,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -723,7 +714,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -737,7 +728,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -751,7 +742,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -765,7 +756,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -779,7 +770,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -793,7 +784,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -817,7 +808,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -831,7 +822,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -845,7 +836,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -859,7 +850,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -873,7 +864,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -887,7 +878,7 @@
                 <a href="https://cellphones.com.vn/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8bGgGMVPJqcrHt5_bbiKfm01zU5BFeV3qPpAi4k7Ajm2Rzct890uhoCET0QAvD_BwE" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i class='bx bx-cart-add'></i>
+                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
               </button>
             </div>
           </div>
@@ -899,6 +890,22 @@
 
     <!-- Phần nút quay lại đầu trang -->
     <a href="#top" class="scroll-to-top"><i class='bx bxs-upvote'></i></a>
+
+    <!-- Phân trang -->
+    <div class="phantrang_container">
+      <div class="phantrang_items">
+        <a href="index.html">1</a>
+      </div>
+      <div class="phantrang_items z">
+        <a href="index.html">2</a>
+      </div>
+      <div class="phantrang_items z">
+        <a href="index.html">3</a>
+      </div>
+      <div class="phantrang_items z">
+        <a href="index.html"><i class='bx bx-chevrons-right'></i></a>
+      </div>
+    </div>
 
     <!-- Phần footer -->
     <footer>
