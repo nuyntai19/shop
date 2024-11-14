@@ -513,6 +513,15 @@ header img {
   font-size: 24px;
   margin-bottom: 0;
 }
+
+.sec:hover {
+  color: #004faf;
+}
+
+.sec_label a:hover {
+  color: #004faf;
+}
+
 .sec_icon {
   font-size: 23px;
   margin-left: auto;
