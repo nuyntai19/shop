@@ -1,0 +1,126 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 30px;
+    align-items: center;
+   
+}
+.ava{
+    width: 100%;
+    height: 300px;
+    width: 300px;
+    border-radius: 16px;
+}
+.grid-khung:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.block{
+    width: 300px;
+
+}
+.block label {
+    display: block;
+    margin-bottom: 5px;
+}
+.block select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.bam-them{
+    background-color:#297be0b1;
+    margin-left: 10px;
+}
+.bam-sua{
+    background-color:#297be0b1;
+    margin-left: 20px;
+}
+.avatar_admin{
+    width: 180px;
+    border-radius: 250px;
+    border-color: #297be0b1;
+}
+.page-admin{
+    display: grid;
+    grid-template-columns: 200px 400px;
+
+}
+.taikhoan{
+    display: grid;
+    grid-column: 1fr 1fr;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.theodoi{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 160px 1fr ;
+}
+.sua-sanpham{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 100px;
+}
+.sua-sanpham p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.xoa-anh{
+    position: relative;
+    width:160px ;
+}
+.anh-xoa{
+    width: 150px;
+    padding: 5px;
+
+}
+.xoa{
+    background-color: rgb(232, 38, 38);
+    color: rgb(0, 0, 0);
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    border-radius: 20px;
+}
+.anh-xoa:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.sua-anh{
+    padding-top: 10px;
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.all-sua{
+  position: fixed;
+  top: 80px;
+  left: 250px;
+  bottom: 50px;
+  right: 50px;
+}
+
+.in-sua{
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #297be0b1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.themhinhanh{
+    padding-top: 20px;
+}
+.button-sua-in{
+   padding: 10px;
+    text-align: right;
+}
+
+.hide{
+    display: none;
+}
