@@ -224,6 +224,7 @@
       </div>
     </div>
 
+  <div class="tong_sanpham_nangcao">
     <!-- Tìm kiếm nâng cao -->
     <div class="danhmucsanpham-container">
       <div class="danhmucsanpham-items">
@@ -234,37 +235,55 @@
           </div>
         </div>
         <div class="danhmucsanpham-loai">
-          <h4 style="margin: 5px 0;">Loại sản phẩm:</h4>
-            <input type="radio" id="iphone" name="fav_languag" value="iphone">
-            <label for="iphone">iPhone</label>
-            <input type="radio" id="samsung" name="fav_languag" value="samsung">
-            <label for="samsung">Samsung</label>
-            <input type="radio" id="xiaomi" name="fav_languag" value="xiaomi">
-            <label for="xiaomi">Xiaomi</label>
-            <input type="radio" id="oppo" name="fav_languag" value="oppo">
-            <label for="oppo">Oppo</label>
-            <input type="radio" id="realme" name="fav_languag" value="realme">
-            <label for="realme">realme</label> 
+          <h4>Loại sản phẩm:</h4>
+          <div class="danhmucsanpham-loai_nd">
+            <div class="danhmucsanpham-loai_items type" style="margin-left: 9px;">
+              <input type="radio" id="iphone" name="fav_languag" value="iphone">
+              <label for="iphone">iPhone</label>
+            </div>
+            <div class="danhmucsanpham-loai_items type" style="margin-left: 9px;">
+              <input type="radio" id="samsung" name="fav_languag" value="samsung">
+              <label for="samsung">Samsung</label>
+            </div>
+            <div class="danhmucsanpham-loai_items type">
+              <input type="radio" id="xiaomi" name="fav_languag" value="xiaomi">
+              <label for="xiaomi">Xiaomi</label>
+            </div>
+            <div class="danhmucsanpham-loai_items type" style="margin-left: 9px;">
+              <input type="radio" id="oppo" name="fav_languag" value="oppo">
+              <label for="oppo">Oppo</label>
+            </div>
+            <div class="danhmucsanpham-loai_items type" style="margin-left: 9px;">
+              <input type="radio" id="realme" name="fav_languag" value="realme">
+              <label for="realme">realme</label> 
+            </div>
+          </div>
         </div>
         <div class="danhmucsanpham-gia">
           <h4>Giá: </h4>
-          <input list="browsers" name="browser">
-          <datalist id="browsers">
-            <option value="Dưới 500.000đ">
-            <option value="500.000đ - 3.000.000đ">
-            <option value="3.000.000đ - 10.000.000đ">
-            <option value="10.000.000đ - 20.000.000đ">
-            <option value="20.000.000đ Trở lên">
-          </datalist>
+          <select id="browsers" name="browsers">
+            <option value="Trống"></option>
+            <option value="Dưới 500.000đ">Dưới 500.000đ</option>
+            <option value="500.000đ - 3.000.000đ">500.000đ - 3.000.000đ</option>
+            <option value="3.000.000đ - 10.000.000đ">3.000.000đ - 10.000.000đ</option>
+            <option value="10.000.000đ - 20.000.000đ">10.000.000đ - 20.000.000đ</option>
+            <option value="20.000.000đ Trở lên">20.000.000đ Trở lên</option>
+          </select>
         </div>
         <div class="danhmucsanpham-yeucau">
           <h4>Yêu cầu:</h4>
+          <div class="danhmucsanpham-yeucau_nd">
             <input type="radio" id="vanphong" name="fav_language" value="vanphong">
             <label for="vanphong">Văn Phòng</label>
+          </div>
+          <div class="danhmucsanpham-yeucau_nd">
             <input type="radio" id="gaming" name="fav_language" value="gaming">
             <label for="gaming">Gaming</label>
+          </div>
+          <div class="danhmucsanpham-yeucau_nd">
             <input type="radio" id="dangsale" name="fav_language" value="dangsale">
-            <label for="dangsale">Đang sale</label> 
+            <label for="dangsale">Đang sale</label>
+          </div> 
         </div>
         <div class="danhmucsanpham-tim" >
           <button class="button">Tìm kiếm</button>
@@ -273,6 +292,7 @@
     </div>
 
     <!-- Phần sản phẩm ở trang chủ -->
+    <div class="tong_sanpham">
     <!-- sản phẩm nổi bật -->
     <div class="hotSale">
       <div class="title_hotSale">
@@ -1359,26 +1379,15 @@
           </div>
         </div>
       </div>
+     </div>
+
     </div>
+
+  </div>
 
     <!-- Phần nút quay lại đầu trang -->
     <a href="#top" class="scroll-to-top"><i class='bx bxs-upvote'></i></a>
 
-    <!-- Phân trang -->
-    <div class="phantrang_container">
-        <div class="phantrang_items">
-          <a href="sanpham(nologin).html">1</a>
-        </div>
-        <div class="phantrang_items z">
-          <a href="sanpham(nologin).html">2</a>
-        </div>
-        <div class="phantrang_items z">
-          <a href="sanpham(nologin).html">3</a>
-        </div>
-        <div class="phantrang_items z">
-          <a href="sanpham(nologin).html"><i class='bx bx-chevrons-right'></i></a>
-        </div>
-      </div>
 
     <!-- Phần footer -->
     <footer>

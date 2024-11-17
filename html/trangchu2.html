@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css\index.css" />
+    <link rel="stylesheet" href="../css\trangchu.css" />
   </head>
   <body>
     <div class="slider">
@@ -77,7 +77,7 @@
 
       <!--Phần search-->
       <div class="InputContainer">
-        <form action="sanpham(nologin).html" method="GET" class="search-form">
+        <form action="sanpham.html" method="GET" class="search-form">
           <input
             placeholder="Search"
             id="input"
@@ -99,24 +99,43 @@
         <!-- Menu -->
         <div class="menu">
           <div class="thongtin">
-            <div class="thongtincon" id="small">
+            <div class="thongtincon" id="small" onclick="toggleTooltip()">
               <i class="bx bx-user-circle"></i>
-              <a href="login.html">Đăng nhập</a>
+              <div class="tooltip">
+                <div class="tooltip-1">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScT_mFJcmtcWjfwLFCXxRcA9LcZsGlLV3enA&s" alt="anhdaidien">
+                  <h4>Xin chào , Steve!</h4>
+                </div>
+                <div class="tooltip-2">
+                  <h5>Thông báo</h5>
+                  <hr>
+                  <div class="tooltip-2-nd-thongbao">
+                    <p>Trống</p>
+                  </div>
+                </div>
+                <div class="tooltip-4">
+                  <a href="cart_history.html">Lịch sử giỏ hàng</a>
+                </div>
+                <div class="tooltip-3">
+                  <a href="index.html">Đăng xuất</a>
+                </div>
+              </div>
             </div>
+            <div class="overlay" onclick="hideTooltip()"></div>
             <div class="thongtincon-1">
               <i class="bx bx-phone"></i>
               <div class="dathang">
-                <a>Đặt hàng</a>
-                <a>1800.1915</a>
+                <a href="#">Đặt hàng</a>
+                <a href="#">1800.1915</a>
               </div>
             </div>
             <div class="thongtincon-1">
               <i class="bx bx-map"></i>
-              <a>TP.HCM</a>
+              <a href="#1">TP.HCM</a>
             </div>
-            <div class="thongtincon" onclick="alert('Bạn cần đăng nhập!')">
+            <div class="thongtincon" id="giohang">
               <i class="bx bx-cart-download"></i>
-              <a href="#">Giỏ hàng</a>
+              <a href="cart.html">Giỏ hàng</a>
             </div>
           </div>
         </div>
@@ -126,7 +145,7 @@
     <nav class="Thanh">
       <div class="Thanh_con">
         <i class="bx bx-list-ul"></i>
-        <a href="sanpham(nologin).html">Sản phẩm</a>
+        <a href="sanpham.html">Sản phẩm</a>
       </div>
       <div class="Thanh_con" >
         <i class="bx bxs-bell-ring bx-tada"></i>
@@ -154,7 +173,7 @@
         </div>
         <div class="sec">
           <div class="sec_label">
-            <a href="sanpham(nologin).html">
+            <a href="sanpham.html">
               <span>iPhone</span>
             </a>
           </div>
@@ -164,7 +183,7 @@
         </div>
         <div class="sec">
           <div class="sec_label">
-            <a href="sanpham(nologin).html">
+            <a href="sanpham.html">
               <span>Samsung</span>
             </a>
           </div>
@@ -174,7 +193,7 @@
         </div>
         <div class="sec">
           <div class="sec_label">
-            <a href="sanpham(nologin).html">
+            <a href="sanpham.html">
               <span>Xiaomi</span>
             </a>
           </div>
@@ -182,9 +201,9 @@
             <i class="bx bx-chevron-right"></i>
           </div>
         </div>
-        <div class="sec" >
+        <div class="sec">
           <div class="sec_label">
-            <a href="sanpham(nologin).html">
+            <a href="sanpham.html">
               <span>OPPO</span>
             </a>
           </div>
@@ -192,9 +211,9 @@
             <i class="bx bx-chevron-right"></i>
           </div>
        </div>
-        <div class="sec" >
+        <div class="sec">
           <div class="sec_label">
-            <a href="sanpham(nologin).html">
+            <a href="sanpham.html">
               <span>realme</span>
             </a>
           </div>
@@ -225,8 +244,7 @@
             <div class="index-item index-item-4" title="realme C67">realme C67</div>
           </div>
         </div>
-      </div>
-    
+      </div>  
 
       <div class="section_3">
         <div class="section_3-container">
@@ -244,106 +262,12 @@
     </div>
 
     <!-- Phần sản phẩm ở trang chủ -->
-    <!-- sản phẩm nổi bật -->
-    <div class="hotSale">
-
-      <div class="title_hotSale">
-        <div style="display: flex;">
-          <i class='bx bxs-hot' style="align-content: center;"></i>
-          <h2>HOT SALE CUỐI TUẦN</h2>
-        </div>
-        <a href="sanpham(nologin).html"  >Xem thêm</a>
-      </div>
-
-      <div class="hotSaleItemsContainer">
-        <!-- các sản phẩm hot đặt tại đây -->
-        <div class="hotSaleItems">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-16-pro-max.png" alt="Sanpham"/><!--hinh-->
-          <h4>IPhone 16 ProMax | Chính hãng VN/A</h4><!--ten-->
-          <h3>Giá: 34.900.000đ</h3><!--gia-->
-          <div class="Tong_saveBtn">
-            <button class="saveBtn a">
-              <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
-            </button>
-            <button class="saveBtn b">
-              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
-            </button>
-          </div>
-        </div>
-        <div class="hotSaleItems">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-13_2_.png" alt="Sanpham"/><!--hinh-->
-          <h4>IPhone 13 | Chính hãng VN/A</h4><!--ten-->
-          <h3>Giá: 13.790.000đ</h3><!--gia-->
-          <div class="Tong_saveBtn">
-            <button class="saveBtn a">
-              <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
-            </button>
-            <button class="saveBtn b">
-              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
-            </button>
-          </div>
-        </div>
-        <div class="hotSaleItems">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-z-fold-6-xanh_5_.png" alt="Sanpham"/><!--hinh-->
-          <h4>Samsung Galaxy Z Fold6 | Chính hãng VN/A</h4><!--ten-->
-          <h3>Giá: 34.900.000đ</h3><!--gia-->
-          <div class="Tong_saveBtn">
-            <button class="saveBtn a">
-              <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
-            </button>
-            <button class="saveBtn b">
-              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
-            </button>
-          </div>
-        </div>
-        <div class="hotSaleItems">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi_14t_pro_1_.png" alt="Sanpham"/><!--hinh-->
-          <h4>Xiaomi 14T Pro | Chính hãng VN/A</h4><!--ten-->
-          <h3>Giá: 17.990.000đ</h3><!--gia-->
-          <div class="Tong_saveBtn">
-            <button class="saveBtn a">
-              <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
-            </button>
-            <button class="saveBtn b">
-              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
-            </button>
-          </div>
-        </div>
-        <div class="hotSaleItems">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/_/t_i_xu_ng_22__6.png" alt="Sanpham"/><!--hinh-->
-          <h4>Xiaomi Poco X6 Pro</h4><!--ten-->
-          <h3>Giá: 8.490.000đ</h3><!--gia-->
-          <div class="Tong_saveBtn">
-            <button class="saveBtn a">
-              <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
-            </button>
-            <button class="saveBtn b">
-              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
-            </button>
-          </div>
-        </div>
-        <div class="hotSaleItems">
-          <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/o/p/oppo-a18-den.png" alt="Sanpham"/><!--hinh-->
-          <h4>OPPO A18 4GB </h4><!--ten-->
-          <h3>Giá: 3.790.000đ</h3><!--gia-->
-          <div class="Tong_saveBtn">
-            <button class="saveBtn a">
-              <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
-            </button>
-            <button class="saveBtn b">
-              <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <!-- Sản phẩm chính điện thoại -->
     <div class="products">
 
       <div class="title_product">
         <h2>ĐIỆN THOẠI</h2>
-        <a href="sanpham(nologin).html">Xem tất cả</a>
+        <a href="sanpham.html">Xem tất cả</a>
       </div>
     
       <hr>
@@ -361,10 +285,10 @@
             <h3>Giá: 22.490.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -375,10 +299,10 @@
             <h3>Giá: 24.390.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -389,10 +313,10 @@
             <h3>Giá: 10.790.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -403,10 +327,10 @@
             <h3>Giá: 17.090.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -417,10 +341,10 @@
             <h3>Giá: 18.980.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -431,10 +355,10 @@
             <h3>Giá: 34.900.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -455,10 +379,10 @@
             <h3>Giá: 29.990.000</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -469,10 +393,10 @@
             <h3>Giá: 41.900.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -483,10 +407,10 @@
             <h3>Giá: 4.990.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -497,10 +421,10 @@
             <h3>Giá: 13.900.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -511,10 +435,10 @@
             <h3>Giá: 24.990.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -525,10 +449,10 @@
             <h3>Giá: 9.690.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -549,10 +473,10 @@
             <h3>Giá: 12.490.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -563,10 +487,10 @@
             <h3>Giá: 4.390.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -577,10 +501,10 @@
             <h3>Giá: 2.790.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -591,10 +515,10 @@
             <h3>Giá: 20.090.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -605,10 +529,10 @@
             <h3>Giá: 10.980.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -619,10 +543,10 @@
             <h3>Giá: 34.900.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -643,10 +567,10 @@
             <h3>Giá: 4.490.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -657,10 +581,10 @@
             <h3>Giá: 9.390.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -671,10 +595,10 @@
             <h3>Giá: 12.790.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -685,10 +609,10 @@
             <h3>Giá: 6.090.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -699,10 +623,10 @@
             <h3>Giá: 15.980.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -713,10 +637,10 @@
             <h3>Giá: 13.900.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -737,10 +661,10 @@
             <h3>Giá: 4.490.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -751,10 +675,10 @@
             <h3>Giá: 2.390.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -765,10 +689,10 @@
             <h3>Giá: 3.790.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -779,10 +703,10 @@
             <h3>Giá: 2.090.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -793,10 +717,10 @@
             <h3>Giá: 3.980.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -807,10 +731,10 @@
             <h3>Giá: 3.900.000đ</h3>
             <div class="Tong_saveBtn">
               <button class="saveBtn a">
-                <a href="chitietsanpham(nologin).html" target="_blank">Xem chi tiết</a>
+                <a href="./chitietsanpham.html" target="_blank">Xem chi tiết</a>
               </button>
               <button class="saveBtn b">
-                <i onclick="alert('Bạn cần đăng nhập')" class='bx bx-cart-add' ></i>
+                <a href="cart.html"><i class='bx bx-cart-add' ></i></a>
               </button>
             </div>
           </div>
@@ -825,14 +749,14 @@
 
     <!-- Phân trang -->
     <div class="phantrang_container">
-      <div class="phantrang_items">
-        <a href="index.html">1</a>
+      <div class="phantrang_items z">
+        <a href="trangchu.html">1</a>
+      </div>
+      <div class="phantrang_items ">
+        <a href="trangchu2.html">2</a>
       </div>
       <div class="phantrang_items z">
-        <a href="index2.html">2</a>
-      </div>
-      <div class="phantrang_items z">
-        <a href="index.html"><i class='bx bx-chevrons-right'></i></a>
+        <a href="trangchu.html"><i class='bx bx-chevrons-right'></i></a>
       </div>
     </div>
 

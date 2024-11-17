@@ -51,3 +51,18 @@ function initSlider(sliderId) {
 // Khởi tạo các slider
 initSlider("slider1");
 initSlider("slider2");
+
+// User
+function toggleTooltip() {
+  var tooltip = document.querySelector("#small .tooltip");
+  var overlay = document.querySelector(".overlay");
+  tooltip.classList.toggle("show");
+  overlay.classList.toggle("show");
+}
+
+function hideTooltip() {
+  var tooltip = document.querySelector("#small .tooltip");
+  var overlay = document.querySelector(".overlay");
+  tooltip.classList.remove("show");
+  overlay.classList.remove("show");
+}

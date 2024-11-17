@@ -642,7 +642,6 @@ header img {
 
 /*-------------------Tìm kiếm nâng cao -------------------*/
 .danhmucsanpham-container {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -650,12 +649,12 @@ header img {
 }
 
 .danhmucsanpham-items {
-  width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
   border: 2px solid #888;
   border-radius: 5px;
@@ -669,13 +668,14 @@ header img {
 .danhmucsanpham-tieude {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .danhmucsanpham-tieude-items {
-  width: 20%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -685,67 +685,87 @@ header img {
 }
 
 .danhmucsanpham-loai {
-  width: 61%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 5px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
+.danhmucsanpham-loai h4 {
+  margin: 5px 0 5px 10px;
+  width: 100%;
+}
+
+.danhmucsanpham-loai_nd {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 .danhmucsanpham-loai label {
-  margin-right: 20px;
-  padding-right: 20px;
-  font-size: 20px;
-  border-right: 1px solid rgba(119, 119, 119, 0.448);
+  font-size: 17px;
+  width: 100px;
 }
 .danhmucsanpham-loai input {
-  width: 19px;
-  height: 19px;
+  width: 15px;
+  height: 15px;
 }
 
 .danhmucsanpham-gia {
-  width: 61%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 5px 0;
 }
 .danhmucsanpham-gia h4 {
-  margin: 0 10px 0 0;
+  margin: 0 10px 0 10px;
+}
+.danhmucsanpham-yeucau {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.danhmucsanpham-yeucau {
-  width: 61%;
+.danhmucsanpham-yeucau h4 {
+  margin: 5px 0 5px 10px;
+  width: 100%;
+}
+
+.danhmucsanpham-yeucau_nd {
+  width: 92%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 5px 0;
 }
-
-.danhmucsanpham-yeucau label {
-  margin-right: 20px;
-  padding-right: 20px;
-  font-size: 20px;
-  border-right: 1px solid rgba(119, 119, 119, 0.448);
+.danhmucsanpham-yeucau_nd label {
+  font-size: 17px;
+  width: 100px;
 }
 .danhmucsanpham-yeucau input {
-  width: 19px;
-  height: 19px;
+  width: 15px;
+  height: 15px;
 }
-.danhmucsanpham-yeucau h4 {
-  margin: 0 10px 0 0;
-}
+
 .danhmucsanpham-yeucau input[type="radio"],
 .danhmucsanpham-loai input[type="radio"] {
-  appearance: none; /* Loại bỏ giao diện mặc định của nút radio */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 14px;
   height: 14px;
-  border: 2px solid #297be0d6; /* Màu viền của nút radio */
-  border-radius: 0; /* Làm cho nút radio có hình vuông */
+  border: 2px solid #297be0d6;
+  border-radius: 0;
   background-color: white;
   cursor: pointer;
   position: relative;
@@ -757,7 +777,7 @@ header img {
   display: block;
   width: 11px;
   height: 11px;
-  background-color: orange; /* Màu nền khi được chọn */
+  background-color: orange;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -765,12 +785,12 @@ header img {
 }
 
 .danhmucsanpham-tim {
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .button {
@@ -831,12 +851,33 @@ header img {
   }
 }
 
+/*-------------------Phan chia -------------------*/
+.tong_sanpham_nangcao {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.danhmucsanpham-container {
+  width: 20%;
+  height: 463px;
+  margin-right: 10px;
+}
+
+.tong_sanpham {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotSale,
+.products {
+  width: 100%;
+}
+
 /*-------------------Sản phẩm nổi bật ở trang chủ -------------------*/
 
 .hotSale {
-  width: 90%;
-  margin: auto;
-  margin-top: 20px;
   color: white;
   background-color: #297be0d6;
   background-image: url(https://media.istockphoto.com/id/995688184/vi/anh/hi%E1%BB%87u-%E1%BB%A9ng-k%E1%BA%BFt-c%E1%BA%A5u-n%E1%BB%81n-m%C3%A0u-xanh-nh%E1%BA%A1t-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng.jpg?s=612x612&w=0&k=20&c=kHzFC5JH47vnQBAqoJCSP1GHqCdTx9GAtNshGp_YbDI=);
@@ -976,7 +1017,6 @@ header img {
 /* Sản phẩm chính */
 
 .products {
-  width: 90%;
   margin: auto;
   margin-top: 20px;
   color: black;
@@ -1065,36 +1105,6 @@ hr {
   }
 }
 
-/*-------------------Phân Trang-------------------*/
-.phantrang_container {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.phantrang_items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #297be0b1;
-  width: 60px;
-  height: 50%;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.phantrang_items a {
-  text-decoration: none;
-  color: white;
-}
-
-.z {
-  background-color: #297be06c;
-}
 /*-------------------Footer-------------------*/
 
 .infoItems {
