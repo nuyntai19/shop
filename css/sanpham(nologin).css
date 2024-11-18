@@ -482,6 +482,11 @@ header img {
   color: black;
 }
 
+.nd_duongdan a:hover {
+  color: rgb(255, 166, 0);
+  text-decoration: underline;
+}
+
 /*-------------------Slide-Show quảng cáo -------------------*/
 .slide-tong {
   width: 100%;
@@ -638,6 +643,9 @@ header img {
   background-size: cover;
   box-sizing: border-box;
   border-radius: 5px;
+}
+.zz {
+  border: 2px solid black;
 }
 
 /*-------------------Tìm kiếm nâng cao -------------------*/
@@ -873,6 +881,24 @@ header img {
 .hotSale,
 .products {
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .tong_sanpham_nangcao {
+    width: 100%;
+  }
+  #browsers {
+    width: 137px;
+  }
+}
+
+@media (max-width: 768px) {
+  #browsers {
+    width: 86px;
+  }
+  .danhmucsanpham-container {
+    height: 503px;
+  }
 }
 
 /*-------------------Sản phẩm nổi bật ở trang chủ -------------------*/
