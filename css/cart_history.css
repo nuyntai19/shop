@@ -542,3 +542,156 @@ td {
     height: 35px;
   }
 }
+
+/* -----------------------&& [5] &&----------------------- */
+
+.cart-history-nd {
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+.cart-history-nd-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.526);
+}
+.nd-1_1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 45%;
+  gap: 15px;
+  margin-left: 5px;
+}
+.x {
+  font-size: 15px;
+  color: white;
+}
+.nd-1_1 p {
+  background-color: #297be0b1;
+  border-radius: 3px;
+}
+.x a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: #297be0b1;
+  border-radius: 5px;
+}
+.nd-1_2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 45%;
+  gap: 15px;
+  margin-right: 5px;
+}
+.cart-history-nd-2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.nd-2_1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.nd-2_1 img {
+  width: 80px;
+  height: 80px;
+}
+.nd-2_2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 5px 0 0;
+  color: #297be0b1;
+}
+.kettien {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(250, 248, 255);
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+.thanhtien {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+.thanhtien p {
+  font-size: 30px;
+}
+.danhgia {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5px;
+  gap: 20px;
+}
+.danhgia p {
+  padding: 10px;
+  background-color: #297be0b1;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+@media (max-width: 709px) {
+  .cart-history-container {
+    width: 100%;
+  }
+}
+@media (max-width: 497px) {
+  .cart-history-menu {
+    width: 13%;
+  }
+  .cart-history-nd {
+    width: 100%;
+  }
+  .nd a {
+    font-size: 10px;
+  }
+  .x {
+    gap: 10px;
+  }
+  .x a {
+    font-size: 10px;
+  }
+  .x p {
+    font-size: 10px;
+  }
+  .cart-history-menu-tieude h3 {
+    font-size: 15px;
+  }
+  .thanhtien h4 {
+    font-size: 10px;
+  }
+  .thanhtien p {
+    font-size: 15px;
+  }
+  .danhgia {
+    gap: 5px;
+    width: 82%;
+  }
+}
