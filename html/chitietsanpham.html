@@ -43,51 +43,52 @@
               <!-- Menu -->
               <div class="menu">
                 <div class="thongtin">
-                  <div class="thongtincon" id="small">
+                  <div class="thongtincon" id="small" onclick="toggleTooltip()">
                     <i class="bx bx-user-circle"></i>
                     <div class="tooltip">
                       <div class="tooltip-1">
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScT_mFJcmtcWjfwLFCXxRcA9LcZsGlLV3enA&s" alt="anhdaidien">
-                          <h4>Xin chào , Steve!</h4>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScT_mFJcmtcWjfwLFCXxRcA9LcZsGlLV3enA&s" alt="anhdaidien">
+                        <h4>Xin chào , Steve!</h4>
                       </div>
                       <div class="tooltip-2">
-                          <h5>Thông báo</h5>
-                          <hr>
-                          <div class="tooltip-2-nd-thongbao">
-                              <p>Trống</p>
-                          </div>
+                        <h5>Thông báo</h5>
+                        <hr>
+                        <div class="tooltip-2-nd-thongbao">
+                          <p>Trống</p>
+                        </div>
                       </div>
                       <div class="tooltip-4">
                         <a href="cart_history.html">Lịch sử giỏ hàng</a>
                       </div>
                       <div class="tooltip-3">
-                          <a href="index.html">Đăng xuất</a>
+                        <a href="index.html">Đăng xuất</a>
                       </div>
                     </div>
                   </div>
+                  <div class="overlay" onclick="hideTooltip()"></div>
                   <div class="thongtincon-1">
                     <i class="bx bx-phone"></i>
                     <div class="dathang">
-                      <a>Đặt hàng</a>
-                      <a>1800.1915</a>
+                      <a href="#">Đặt hàng</a>
+                      <a href="#">1800.1915</a>
                     </div>
                   </div>
                   <div class="thongtincon-1">
                     <i class="bx bx-map"></i>
-                    <a>TP.HCM</a>
+                    <a href="#1">TP.HCM</a>
                   </div>
-                  <div class="thongtincon">
+                  <div class="thongtincon" id="giohang">
                     <i class="bx bx-cart-download"></i>
                     <a href="cart.html">Giỏ hàng</a>
                   </div>
                 </div>
               </div>
             </div>
-          </header>
-        <div style="display: flex;">
+            </header>
+        <div style="display: flex; width: 90%; margin: auto;">
             <!-- hình sản phẩm -->
             <div style="width: 60%;">
-                <h1>SamSung Galaxy S23</h1>
+                <h1>iPhone 13 128 GB</h1>
                 <img src="../img/tải xuống (1).jpg" width="50%" style="margin-left: 20%;"/>
                 <div style="display: flex;">
                     <div style="border: 1px solid #888; border-radius: 5px; width: 45%; margin: 10px; padding: 5px; background-color: #297be06c;">
@@ -354,5 +355,6 @@ Giảm ngay 200K khi mua Samsung Fit 3 (không áp dụng cùng giảm giá qua 
         </div>
         <div class="rong"></div>
       </footer>
+      <script src="../js/d.js"></script>
     </body>
 </html>
